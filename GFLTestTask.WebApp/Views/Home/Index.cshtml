@@ -1,0 +1,75 @@
+﻿@{
+    
+    ViewData["Title"] = "File Upload";
+}
+@using GFLTestTask.Bll.DTO;
+
+@model List<TreeDataModelDto>
+
+
+@{
+    async Task GetTreeView(List<TreeDataModelDto> listItems, int parentId)
+    {
+        var p = @ViewBag.id;
+        foreach (var i in listItems.Where(w => w.Parent.Equals(parentId)))
+        {
+            <li>
+                @{
+                    var submenu = listItems.Where(w => w.Parent.Equals(i.Id)).Count();
+                }
+                @if (submenu > 0)
+                {
+                    <span class="collapse collapsible"> </span>
+                }
+                else
+                {
+                    <span style="width:15px; display: inline-block"> </span>
+                }
+                <span>
+                    <a href="/Home/Details?id=@i.Parent"> @i.Text</a>
+                </span>
+                @if (submenu > 0)
+                {
+                    <ul>
+                        @{await GetTreeView(listItems, i.Id);}
+                    </ul>
+                }
+            </li>
+        }
+    }
+}
+
+
+
+<div class="mt-4 row">
+    <div class="col text-center">
+        <h1>File Upload </h1>
+    </div>
+</div>
+
+<div class="mt-4 row justify-content-center">
+    <div class="list-group col-5">
+        <a asp-action="UploadFile"
+           asp-controller="Home"
+           class="list-group-item">
+            Upload Control
+        </a>
+        
+    </div>
+</div>
+
+
+  <h2>Treeview from Database Data</h2>
+  <div style="border:solid 1px black; padding: 10px; background-color:FAFAFA">
+        <div class=" ="treeview>
+            @if (Model != null && Model.Count() > 0)
+            {
+            <ul>
+                @{
+                    await GetTreeView(Model, @ViewBag.id ?? Model.FirstOrDefault().Parent ?? 0);
+                }
+                </ul>
+            }
+        </div>
+   </div>
+        
