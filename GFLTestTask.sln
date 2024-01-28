@@ -12,7 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{37046ED9-875A-44F7-8FA3-380FCD0B5D48}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\..\..\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\GFLTestTask.bak = ..\..\..\..\..\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\Backup\GFLTestTask.bak
-		..\..\..\Downloads\README (1).md = ..\..\..\Downloads\README (1).md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "In", "In", "{FAC4AFA3-9B41-41B4-98B1-AB80FCFF4BC0}"
