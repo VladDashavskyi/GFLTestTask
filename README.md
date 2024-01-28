@@ -5,4 +5,4 @@ Used NuGet packages: "Microsoft.EntityFrameworkCore" Version="7.0.2" "Microsoft.
 
 Build
 Restore Data base from backup file "GFLTestTask.bak", the backup is in folder DataBackup in project. Create user in SQL server: "webapi"/"123". Then use that in ConnectionStrings, where change please Data source, login and password.
-
+To test app, there are 2 files: JsonTest and TxtTest. 
