@@ -1,0 +1,66 @@
+[
+	{
+		"User": {
+			"FirstName": "Vlad",
+			"LastName": "Dashavskyi",
+			"MiddleName": "Ruslanovich",
+			"Employee": {
+				"StartDate": "01/01/2021",
+				"EndDate": "",
+				"Position": {
+					"PositionId": 1
+				},
+				"Salary": 500.25,
+				"LeaderId": null
+			}
+		}
+	},
+	{
+		"User": {
+			"FirstName": "Ivan",
+			"LastName": "Mor",
+			"MiddleName": "Ivanovich",
+			"Employee": {
+				"StartDate": "02/01/2021",
+				"EndDate": "",
+				"Position": {
+					"PositionId": 2
+				},
+				"Salary": 400.35,
+				"LeaderId": 1
+			}
+		}
+	},
+	{
+		"User": {
+			"FirstName": "Dana",
+			"LastName": "Scahamberger",
+			"MiddleName": "D",
+			"Employee": {
+				"StartDate": "02/23/2021",
+				"EndDate": "",
+				"Position": {
+					"PositionId": 4
+				},
+				"Salary": 400.35,
+				"LeaderId": 2
+			}
+		}
+	},
+	{
+		"User": {
+			"FirstName": "Diana",
+			"LastName": "Smith",
+			"MiddleName": "D",
+			"Employee": {
+				"StartDate": "03/01/2021",
+				"EndDate": "",
+				"Position": {
+					"PositionId": 5
+				},
+				"Salary": 400.35,
+				"LeaderId": 3
+			}
+		}
+	}
+]
